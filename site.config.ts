@@ -26,8 +26,8 @@ export default siteConfig({
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
-  defaultPageIcon: null,
-  defaultPageCover: null,
+  defaultPageIcon: 'https://img.notionusercontent.com/s3/prod-files-secure%2F4bdda44f-c641-4a80-b8d2-3a790ab9f591%2F8b5b5aa9-b9d1-451a-84f0-94153c00e7f3%2FScreenshot_2025-02-15_at_15.02.30.jpg/size/w=250?exp=1739771324&sig=2PADVfIelKqansz_Wbtk3yc3yB159J5IfhLEtiDpXgw',
+  defaultPageCover: 'https://images.unsplash.com/photo-1622110356047-dae9d6b0eeab?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400',
   defaultPageCoverPosition: 0.5,
 
   // whether or not to enable support for LQIP preview images (optional)
@@ -49,17 +49,16 @@ export default siteConfig({
   pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
-  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  // important pages
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'About',
+      pageId: '197c5b70698c80e0bf9ddd8c30badb13'
+    },
+    {
+      title: 'Contact',
+      pageId: '294e1468b6824f2698126400a75cd39a'
+    }
+  ]
 })
