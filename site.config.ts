@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Smars Hu',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Hello World! Smars Hu is here! ',
 
   // social usernames (optional)
   // twitter: 'transitive_bs',
