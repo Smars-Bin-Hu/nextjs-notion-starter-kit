@@ -2,24 +2,24 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: 'd168745d726c4f6ab6e2a1bf0123b9e2',
+  rootNotionPageId: '30865ca3b64d435eae4619aa65ef61d1',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'The space of Smars Hu',
-  domain: 'smars-bin-hu',
+  name: 'The Tech Blogger of Smars',
+  domain: 'overhill',
   author: 'Smars Hu',
 
   // open graph metadata (optional)
-  description: 'Hello World! Smars Hu is here! ',
+  description: 'Smars the Developer is a open source guy! :) ',
 
   // social usernames (optional)
   // twitter: 'transitive_bs',
-  // github: 'smars-bin-hu',
-  // linkedin: 'smars-hu-8a1183246',
+  github: 'smars-bin-hu',
+  linkedin: 'smars-hu-8a1183246',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: 'channel/UCTJWjWrajSwUSfsNyrc9acA', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
