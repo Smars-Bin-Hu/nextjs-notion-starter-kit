@@ -17,12 +17,12 @@ export default siteConfig({
   description: 'Smars the developer, also loves hitting the gym, hiking, videomaking, hip-hop dancing, and minimalism.',
 
   // social usernames (optional)
-    //   twitter: '',
-    github: 'Smars-Bin-Hu',
-    linkedin: 'smars-hu',
+  //   twitter: '',
+  github: 'Smars-Bin-Hu',
+  linkedin: 'smars-hu',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
-  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  // youtube: 'channel/UCTJWjWrajSwUSfsNyrc9acA', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
