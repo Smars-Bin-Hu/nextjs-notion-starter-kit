@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'personal-page',
+  name: 'Personal-Page',
   domain: 'Smars',
   author: 'Smars Hu',
 
