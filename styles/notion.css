@@ -8,22 +8,25 @@
  */
 
 .notion {
-  --notion-max-width: 720px;
-  --notion-header-height: 54px;
+  /* --notion-max-width: 900px; */
+  --notion-header-height: 50px;
 }
 
 .notion-frame {
   padding: 0;
 }
 
+/* 通过max-width调整一行最多能放进去几个cover */
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
   line-height: 1.65;
+  --notion-max-width:1200px  
 }
 
-/* .index-page {
-  --notion-max-width: 900px;
-} */
+/* 通过max-width调整一行最多能放进去几个cover */
+.index-page {
+  --notion-max-width: 1000px;
+}
 
 .notion-text {
   padding: 0.5em 2px;
@@ -54,9 +57,11 @@
 }
 
 .notion-gallery-grid {
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 6vmin;
-  gap: 6vmin;
+  gap: 3vmin;
+  margin-bottom: 3vmin;
+  border-top: 0px
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
@@ -64,13 +69,17 @@
 }
 
 .notion-gallery-grid .notion-page-title-text {
-  font-size: 2em;
+  font-size: 1.5em;
   white-space: unset;
 }
 
 .notion-gallery-grid .notion-collection-card-property {
   white-space: unset;
   text-overflow: unset;
+}
+
+.notion-collection-header-title{
+    font-size: 40px;
 }
 
 .notion-gallery-grid .notion-property-text {
@@ -82,10 +91,6 @@
   box-shadow: none;
 }
 
-.notion-collection-card-cover img {
-  border-radius: 16px;
-}
-
 .notion-collection-card {
   overflow: visible;
 }
@@ -95,11 +100,43 @@
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
 }
 
-.notion-collection-card-cover {
-  border-bottom: 0 none;
-  transition: filter 150ms linear;
-  filter: none;
+/* notion page： 调整cover图片大小 */
+.notion-page .notion-collection-card-cover {
+    border-bottom: 0 none;
+    transition: filter 150ms linear;
+    filter: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px !important;
+    overflow: hidden;
 }
+
+.notion-page  .notion-collection-card-cover img {
+    border-radius: 16px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* index page ： 调整cover图片大小*/
+.index-page .notion-collection-card-cover {
+    border-bottom: 0 none;
+    transition: filter 150ms linear;
+    filter: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px !important;
+    overflow: hidden;
+  }
+  
+  .index-page .notion-collection-card-cover img {
+      border-radius: 16px;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
 
 .notion-collection-card:hover .notion-collection-card-cover {
   filter: brightness(120%);
@@ -121,10 +158,10 @@
 
 .notion-quote {
   padding: 0.2em 0.75em;
-  line-height: 1.5;
-  font-style: italic;
+  line-height: 2;
+  /* font-style: italic; */
   font-size: 1.2em;
-  border-left: 4px solid #67bdfc;
+  border-left: 4px solid #adaeb0;
 }
 
 .notion-h1,
@@ -189,6 +226,10 @@
   align-items: center;
   padding: 0;
   min-height: 23px;
+}
+
+.notion-property.notion-property-checkbox{
+    display: none;
 }
 
 .notion-page-cover-wrapper,
