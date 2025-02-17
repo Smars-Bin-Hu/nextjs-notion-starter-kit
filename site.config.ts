@@ -17,7 +17,7 @@ export default siteConfig({
   description: 'Smars the developer, also loves hitting the gym, hiking, videomaking, hip-hop dancing, and minimalism.',
 
   // social usernames (optional)
-  //   twitter: '',
+  twitter: 'SmarsBHu',
   github: 'Smars-Bin-Hu',
   linkedin: 'smars-hu',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
