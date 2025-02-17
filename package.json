@@ -54,6 +54,7 @@
     "react-tweet": "^3.2.1",
     "react-use": "^17.4.2",
     "rss": "^1.2.2",
+    "sharp": "^0.33.5",
     "vercel": "^41.1.4"
   },
   "devDependencies": {
