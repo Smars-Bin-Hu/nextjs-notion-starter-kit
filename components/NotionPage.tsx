@@ -12,11 +12,7 @@ import {
 } from 'notion-utils'
 import * as React from 'react'
 import BodyClassName from 'react-body-classname'
-import {
-  type NotionComponents,
-  NotionRenderer,
-  useNotionContext
-} from 'react-notion-x'
+import { type NotionComponents, useNotionContext } from 'react-notion-x'
 import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet'
 import { useSearchParam } from 'react-use'
 
@@ -136,6 +132,13 @@ const Modal = dynamic(
   }
 )
 
+const NotionRenderer = dynamic(
+  () => import('react-notion-x').then((m) => m.NotionRenderer),
+  {
+    ssr: false
+  }
+)
+
 function Tweet({ id }: { id: string }) {
   const { recordMap } = useNotionContext()
   const tweet = (recordMap as types.ExtendedTweetRecordMap)?.tweets?.[id]
@@ -218,7 +221,12 @@ export function NotionPage({
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
 
-  const { isDarkMode } = useDarkMode()
+  const { isDarkMode: resolvedIsDarkMode } = useDarkMode()
+  const [isDarkMode, setIsDarkMode] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsDarkMode(resolvedIsDarkMode)
+  }, [resolvedIsDarkMode])
 
   const siteMapPageUrl = React.useMemo(() => {
     const params: any = {}
